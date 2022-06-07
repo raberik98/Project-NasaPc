@@ -1,0 +1,188 @@
+@import "./CostumeVariables.scss";
+
+.productCardSettings {
+    position: relative;
+    background-color: $darkblue;
+    height: 350px;
+    width: 335px;
+    margin: 20px;
+    float: left;
+
+    img{
+        width: 90%;
+        margin-left: 5%;
+        margin-left: 5%;
+        margin-top: 5%;
+        height: 65%;
+    }
+    .name{
+        margin-left: 5%;
+        margin-left: 5%;
+        margin-top: 2%;
+        color: $lightest;
+        overflow: hidden;
+    }
+    .pricebox{
+        background-color: $darkblue;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 55%;
+        height: 13%;
+    }
+    .price{
+        color: $lightgold;
+        position: absolute;
+        top: 3%;
+        right: 7%;
+    }
+
+    
+    .add-to-cart, .details {
+        width: fit-content;
+        height: 25px;
+        color: $lightest;
+        border: none;
+        transition: 0.3s;
+        position: absolute;
+        border-radius: 3px;
+    }
+    .add-to-cart {
+        left: 5%;
+        bottom: 3%;
+        background-color: $gold;
+    }
+    .details {
+        right: 5%;
+        bottom: 3%;
+        background-color: $lightestblue;
+    }
+
+}
+
+
+
+.details_screen {
+    border: 3px solid white;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    color: white;
+    height: 700px;
+    width: 550px;
+    background-color: $lightblue;
+
+
+    img {
+        width: 500px;
+
+        padding: 0;
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .category {
+        color: $lightgreen;
+        position: absolute;
+        top: 0.1%;
+        right: 9%;
+    }
+    .name{
+        margin-left: 25px;
+        margin-top: 15px;
+        color: $lightest;
+        overflow: hidden;
+    }
+    .pricebox{
+        border-radius: 20px;
+        background-color: $lightblue;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 45%;
+        height: 65px;
+    }
+    .price{
+        color: $lightgold;
+        position: absolute;
+        top: 4.2%;
+        right: 9%;
+    }
+    .rating {
+        position: absolute;
+        bottom: 3%;
+        left: 40%;
+    }
+    .add-to-cart, .close {
+        width: fit-content;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        color: $lightest;
+        border: none;
+        transition: 0.3s;
+        position: absolute;
+        border-radius: 5px;
+    }
+    .add-to-cart {
+        font-weight: bold;
+        left: 5%;
+        bottom: 3%;
+        background-color: $gold;
+    }
+    .close {
+        font-weight: bold;
+        right: 5%;
+        bottom: 3%;
+        background-color: $orangewarning;
+    }
+    // .lineInTheDetails{
+    //     position: absolute;
+    //     margin-top: 5px;
+    //     margin-left: 5%;
+    //     margin-right: 5%;
+    //     width: 90%;
+    //     height: 2px;
+    //     border-radius: 2px;
+    //     background-color: white;
+    // }
+    .descriptionbox {
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1%;
+        width: 90%;
+        height: 150px;
+        border-radius: 10px;
+        background-color: $lightestblue;
+        
+    }
+    
+
+    @media (max-width: $MobilView) {
+        top: 50%;
+        right: 0%;
+        width: $SmallestWidth;
+        height: 600px;
+
+        img {
+            width: 350px;
+    
+            padding: 0;
+            margin-top: 25px;
+            margin-left: 12.5px;
+            margin-right: 12.5px;
+        }
+        .rating {
+            bottom: 11%;
+            left: 33%;
+        }
+    }
+}

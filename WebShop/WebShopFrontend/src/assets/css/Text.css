@@ -1,0 +1,33 @@
+.highlightedInfoText {
+    color: white;
+    text-shadow: 1px 1px gray;
+}
+
+.headText {
+    margin: 0,0,0,0;
+}
+
+/* --------------------------------------- */
+.hotLink {
+    font-size: x-large;
+    color: rgb(240, 115, 70);
+    font-weight: bold;
+}
+.hotLink:hover {
+    animation: hotLinkHover 0.75s ease-in forwards;
+    
+}
+@keyframes hotLinkHover{
+    0% {
+        font-size: x-large;
+        color: rgb(240, 115, 70);
+        font-weight: bold;
+    }
+
+    100% {
+        font-size: xx-large;
+        color: rgb(255, 68, 0);
+        font-weight: bold;
+    }
+}
+/* --------------------------------------- */

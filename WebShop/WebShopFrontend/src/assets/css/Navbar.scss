@@ -1,0 +1,188 @@
+@import "./CostumeVariables.scss";
+
+.primary-navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background: hsl(0, 0%, 0% / 0.75); */
+    background-color: $darkblue;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nasapc-NASA {
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    
+}
+
+.nasapc-PC {
+    color: white;
+    background-color: $lightgray;; ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+.navbar-item {
+   text-decoration: none;
+   
+}
+
+.navbar-link {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.NavbarIcons {
+    font-size: 1.5rem;
+}
+.navbar-link:hover, .NavbarIcons:hover {
+    color: $lightestblue;
+}
+
+
+// @supports (backdrop-filter: blur(1rem)) {
+//     .primary-navbar {
+//         background: hsl(0, 0%, 100% / 01);
+//         backdrop-filter: blur(1rem);
+//     }
+// }
+
+ /* ........................PC view................................ */
+@media (min-width: $MobilView) {
+    .primary-navbar {
+        width: 100%;
+        padding: 2rem;
+
+    }
+    .secondary-navbar {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        margin-top: 3px;
+        
+    }
+    .secondary-navbar > div > ul > .navbar-item {
+        margin: 15px;
+        
+    }
+    .navbar-item {
+        width: fit-content;
+        align-self: center;
+        text-align: center;
+        align-content: center;
+    }
+    .AccountMenues {
+        position: absolute;
+        right: 5%;
+        display: flex;
+    }
+}
+
+ /* ........................Mobile view................................ */
+@media (max-width: $MobilView) {
+    .primary-navbar {
+        --gap: 1.5em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 50%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 150ms ease-out;
+    }
+    .secondary-navbar {
+        /* --gap: 1.5em; */
+        
+        position: fixed;
+        z-index: 999;
+        inset: 0 0 0 10%;
+
+        flex-direction: column;
+        padding: min(30vh, 15rem) 0.1em;
+
+        /* transform: translateX(100%);
+        transition: transform 150ms ease-out; */
+    }
+    .AccountMenues {
+        margin-top: 3rem;
+        align-self: center;
+        text-align: center;
+        align-content: center;
+    }
+    /* .secondary-navbar {
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        background: hsl(0, 0%, 0% / 0.75);
+        transform: translateY(10px);
+        transition: all 0.2s ease;
+        max-height: 0;
+        overflow: hidden;
+    } */
+
+    .primary-navbar[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .secondary-navbar[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .nasapc-NASA {
+        font-size: x-large;
+    }
+    
+    .nasapc-PC {
+        font-size: x-large;
+    }
+    .navbar-item {
+        width: 6rem;
+        align-self: center;
+        text-align: center;
+        align-content: center;
+        margin-top: 0;
+    }
+    
+    /* .navbar-link-hasChild[dropdown-data-visible = "true"] > .secondary-navbar{
+        max-height: fit-content;
+        
+    } */
+
+    /* ................These are the toggle button settings.......... */
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        right: 2rem;
+        top: 2rem;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: 0;
+        background-color: $lightgray;
+        background-image: url("../svg/list.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        width: 3rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-color: transparent;
+        background-color: $lightgray;
+        background-image: url("../svg/x-lg.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        width: 3rem;
+    }
+}
+

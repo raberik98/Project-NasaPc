@@ -1,0 +1,64 @@
+@import "./CostumeVariables.scss";
+
+body {
+    background-color: $darkblue;
+    min-width: $SmallestWidth;
+    /* background-image: url('../image/1234.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+    // min-height: 1500px;
+}
+.mainContent {
+    background-color: $lightblue;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap,0.2rem);
+}
+
+
+
+/* .productCardSettings {
+    position: relative;
+    padding: 0;
+    height: 550px;
+    width: 350px;
+    margin: 0.75em;
+    color: white;
+    background-color: rgb(72, 81, 90);
+    /* border: 2px solid rgb(31, 30, 30); */
+/* } */
+/* .productCardSettings > img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 350px;
+    height: 300px;
+    border-image: none;
+    image-orientation: from-image;
+    vertical-align: auto;
+}
+.productCardSettings:hover
+{
+    box-shadow: 0px 4px 4px 0px white;
+} */ 
+
+
+
+.standardFormSettings > div {
+    max-width: 20rem;
+}
+.standardFormSettings > div > label {
+    color: white;
+}
+.standardFormSettings > div > textarea {
+    min-height: 10rem;
+}
+
+.justSomeColorsForTheSCSS {
+    background-color: gray;
+    
+}
+
